@@ -42,7 +42,7 @@ const NavBar = () => {
         const userName = user.result.name
 
         dispatch(getPostsBySearch({ userName }))
-        history.push(`/posts/search?searchQuery=${userName}`);
+        history.push(`/posts/search?searchQuery=${userName}&tags=`);
     }
 
     return (
