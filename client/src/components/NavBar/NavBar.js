@@ -52,17 +52,17 @@ const NavBar = () => {
                 </div>
                 <Toolbar className={classes.toolbar}>
                     {user ? (
-                        <ButtonBase
-                        onClick={handleClick}
-                        >
                             <div className={classes.profile}>
-                                <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>
-                                    {user.result.name.charAt(0)}
-                                </Avatar>
-                                <Typography className={classes.userName} variant='h6'>{user.result.name}</Typography>
+                                <ButtonBase
+                                onClick={handleClick}
+                                >
+                                    <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>
+                                        {user.result.name.charAt(0)}
+                                    </Avatar>
+                                    <Typography className={classes.userName} variant='h6'>{user.result.name}</Typography>
+                                </ButtonBase>
                                 <Button variant='contained' className={classes.logout} color='secondary' onClick={logout} size='large'>Log out</Button> 
                             </div>
-                        </ButtonBase>
 
                     ) :
                     (
