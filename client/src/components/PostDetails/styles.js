@@ -4,7 +4,10 @@ export default makeStyles((theme) => ({
   media: {
     borderRadius: '20px',
     objectFit: 'cover',
-    width: '800px'
+    width: '800px',
+    [theme.breakpoints.down('sm')]: {
+      width: '300px'
+    },
   },
   card: {
     display: 'flex',
@@ -37,6 +40,9 @@ export default makeStyles((theme) => ({
   commentsOuterContainer: {
     display: 'flex',
     justifyContent: 'space-between',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   commentsInnerContainer: {
     maxHeigth: '200px',
